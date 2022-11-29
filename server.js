@@ -25,9 +25,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get('/', (req, res) =>{
-    res.json(db.users)
-})
+app.get('/', (req, res) =>{res.send('Success')})
 
 app.post('/signin', (req,res) =>{signin.handleSignin(req,res,db,bcrypt)})
 
